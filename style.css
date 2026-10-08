@@ -1,0 +1,169 @@
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #fafafa;
+    color: #333;
+}
+/* 1. Navbar Flexbox Layout with Header Color */
+.header {
+    background: #f3f0ff; /* Light purple header background */
+    border-bottom: 2px solid #e0d9ff;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.logo {
+    color: #6c5ce7;
+    font-size: 20px;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+}
+.nav-links a:hover {
+    color: #6c5ce7;
+}
+
+/* 2. Hero Section Flexbox Layout */
+.hero-section {
+    padding: 40px 20px;
+}
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.hero-text {
+    flex: 1 1 300px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.hero-text h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #2d3436;
+}
+.hero-text p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.btn {
+    display: inline-block;
+    background: #6c5ce7;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.hero-img {
+    flex: 1 1 300px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.hero-img img {
+    width: 100%;
+    border-radius: 20px;
+}
+/* 3 & 4. Team & Services Sections (Cards Layout) */
+.team-section, .services-section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.team-section h2, .services-section h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #2d3436;
+}
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    flex: 1 1 250px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: left;
+}
+.card h3 {
+    color: #6c5ce7;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.card p {
+    font-size: 13px;
+    color: #666;
+}
+/* 5. Footer Layout */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    margin-top: 30px;
+}
+/* ===============RESPONSIVE MEDIA QUERY (For Mobile Screens)*/
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+}
